@@ -25,17 +25,31 @@
 \pard\pardeftab720\partightenfactor0
 \cf6    printf\cf7 (\cf4 "\cf10 \\n\cf4 A somat\'f3ria \'e9 \cf8 \cb3 %ld\cf10 \cb3 \\n\cf4 "\cf7 ,\cf8 \cb3 soma\cf7 \cb3 );\
 \}\
-\cf5 int \cf6 main\cf7 (\cf5 void\cf7 ) \{\
+\cf5 long int \cf6 somatoriaRecursiva\cf7 (\cf5 int \cf8 \cb3 x\cf7 \cb3 ,\cf5 int \cf8 \cb3 y\cf7 \cb3 )\{\
+\pard\pardeftab720\partightenfactor0
+\cf2  if\cf7 (\cf8 \cb3 x\cf7 \cb3 <=\cf8 \cb3 y\cf7 \cb3 )\{\
+\pard\pardeftab720\partightenfactor0
+\cf5    long int \cf8 \cb3 soma \cf7 \cb3 = \cf8 \cb3 x\cf7 \cb3 ;\
+\cf5        long int \cf8 \cb3 resultado \cf7 \cb3 = \cf6 somatoriaRecursiva\cf7 (\cf8 \cb3 x\cf7 \cb3 +\cf9 \cb3 1\cf7 \cb3 , \cf8 \cb3 y\cf7 \cb3 );\
+\cf6        printf\cf7 (\cf4 "\cf8 \cb3 %ld \cf4 \cb3 - "\cf7 ,\cf8 \cb3 resultado\cf7 \cb3 );\
+\pard\pardeftab720\partightenfactor0
+\cf2    return \cf8 \cb3 soma \cf7 \cb3 + \cf8 \cb3 resultado\cf7 \cb3 ;\
+ \}\
+\cf2  else\cf7 \{\
+\cf2    return \cf9 \cb3 0\cf7 \cb3 ;\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf7 \} \} 
+\fs24 \cf11 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs29\fsmilli14667 \cf5 \cb3 int \cf6 main\cf7 (\cf5 void\cf7 ) \{\
 \cf6    printf\cf7 (\cf4 "\cf10 \\n\\n \cf4 :::::::::  INICIO DO PROGRAMA ::::::: \cf10 \\n\\n\cf4 "\cf7 );\
 \cf6    printf\cf7 (\cf4 "\cf10 \\n\\n\cf4 Digite o n\'famero x: "\cf7 );\
 \cf6    scanf\cf7 (\cf4 "\cf8 \cb3 %d\cf4 \cb3 "\cf7 ,&x);\
 \cf6    printf\cf7 (\cf4 "\cf10 \\n\\n\cf4 Digite o n\'famero y: "\cf7 );\
 \cf6    scanf\cf7 (\cf4 "\cf8 \cb3 %d\cf4 \cb3 "\cf7 ,&y);\
+\cf6    printf\cf7 (\cf4 "\cf10 \\n\cf4 A somat\'f3ria \'e9: \cf8 \cb3 %ld\cf4 \cb3 "\cf7 ,\cf6 somatoriaRecursiva\cf7 (x,y));\
 \pard\pardeftab720\sa240\partightenfactor0
-\cf6 \cb3 soma\cf7 \cb3 (x,y); 
-\fs24 \cf11 \cb1 \
-\pard\pardeftab720\sa240\partightenfactor0
-
-\fs29\fsmilli14667 \cf2 \cb3 return \cf9 0\cf7 ; \} 
+\cf2 return \cf9 0\cf7 ; \} 
 \fs24 \cf11 \cb1 \
 }
